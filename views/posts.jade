@@ -1,0 +1,10 @@
+- posts.forEach(function(post, index) { 
+  div.row.span12
+    h2
+      a(href='/u/' + post.user)= post.user
+    p
+      small
+        = post.time
+    p
+      = post.post
+-})

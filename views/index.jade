@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  - if (!user)
+      .jumbotron.hero-unit
+        h1 Welcome to Microblog
+        p Microblog is powered on Node.js
+        p
+          a(class='btn btn-primary btn-large', href='/login') Login
+          a(class='btn btn-large', href='/reg') Register
+  - else
+      .container
+        .row
+          .col-md-4
+            include say
+            include posts
+            

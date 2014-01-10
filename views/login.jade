@@ -1,0 +1,19 @@
+extends layout
+
+
+block content
+  .jumbotron
+    form(class='form-horizontal', method='post')
+        fieldset
+            legend User Login
+            div#user_group.control-group
+                label(class='control-label', for='username') User Name
+                div.controls
+                    input(type='text', class='input-xlarge', id='username', name='username')
+                    span#user_error.invisible.help-inline User doesn't exist!
+            div.control-group
+                label(class='control-label', for='password') Password
+                div.controls
+                    input(type='password', class='input-xlarge', id='password', name='password')
+            div.form-actions
+                button(type='submit', class='btn btn-primary', id='btn_login') Login
